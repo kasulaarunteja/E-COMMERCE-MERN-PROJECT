@@ -16,7 +16,7 @@ const Products = () => {
 
         const getProducts = async () => {
             setLoading(true);
-            const response = await fetch("http://localhost:4000/product");
+            const response = await fetch("https://aruntejaecommerce.herokuapp.com/product");
             if (componentMounted) {
                 setData(await response.clone().json());
                 setFilter(await response.json());
