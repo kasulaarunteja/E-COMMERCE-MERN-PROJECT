@@ -30,7 +30,7 @@ const Login = () => {
     const handleClick = (e) => {
         e.preventDefault();
         setLogin(false);
-        axios.post('https://arunteja.herokuapp.com/login', user)
+        axios.post('https://aruntejaecommerce.herokuapp.com/login', user)
             .then((res) => {
                 console.log(res)
                 setUser(res.data.user)
