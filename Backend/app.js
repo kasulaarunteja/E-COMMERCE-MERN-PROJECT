@@ -25,10 +25,25 @@ body("password").isLength({min : 6})
 
 app.use("/login", cors(corsOptions), login)
 app.use("/product", cors(corsOptions),  productController)
-const start = async () => {
-  await connect();
-  app.listen(PORT, () => {
-    console.log(`Listening on Port ${PORT}`);
+// const start = async () => {
+  app.listen(PORT, async() => {
+    try {
+      await connect();
+      console.log(`Listening on Port ${PORT}`);
+    } catch (error) {
+       console.log(error)
+    }
   });
-};
-start();
+// };
+// start();
+
+
+
+// app.listen(PORT  || 8080 , async () => {
+// 	try {
+// 		await connect()
+// 		console.log("Connected to DB");
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// });
