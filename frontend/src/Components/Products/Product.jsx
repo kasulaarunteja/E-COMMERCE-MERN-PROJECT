@@ -31,7 +31,7 @@ const Product = () => {
     useEffect(() => {
         const getProduct = async () => {
             setLoading(true);
-            const response = await fetch(`https://aruntejaecommerce.herokuapp.com/product/${id}`).catch((err) =>{
+            const response = await fetch(`https://pleasant-blazer-duck.cyclic.app/product/${id}`).catch((err) =>{
                 console.log("not found error", err)
                 setNotFound(false)
               });
