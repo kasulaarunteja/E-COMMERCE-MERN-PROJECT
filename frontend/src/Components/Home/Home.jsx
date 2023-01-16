@@ -13,7 +13,7 @@ const Home = () => {
 
     useEffect(() => {
         let token = JSON.parse(localStorage.getItem('auth'))
-        axios.get('https://aruntejaecommerce.herokuapp.com/user/', {
+        axios.get('https://pleasant-blazer-duck.cyclic.app/user/', {
             headers: { "Authorization": `Bearer ${token}` }
         })
             .then((res) => {
