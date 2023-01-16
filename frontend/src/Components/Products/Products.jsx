@@ -16,7 +16,7 @@ const Products = () => {
 
         const getProducts = async () => {
             setLoading(true);
-            const response = await fetch("https://aruntejaecommerce.herokuapp.com/product");
+            const response = await fetch("https://pleasant-blazer-duck.cyclic.app/product");
             if (componentMounted) {
                 setData(await response.clone().json());
                 setFilter(await response.json());
