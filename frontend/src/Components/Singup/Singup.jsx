@@ -24,7 +24,7 @@ const Singup = () => {
     e.preventDefault();
     console.log(user);
     setRegistered(false)
-    axios.post('https://aruntejaecommerce.herokuapp.com/register', user)
+    axios.post('https://pleasant-blazer-duck.cyclic.app/register', user)
 
       .then((res) => {
         // alert(res.data);
